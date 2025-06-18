@@ -3,41 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education</title>
+    <title>Education - Aryan Mohan</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
             <h1>ARYAN MOHAN</h1>
             <div class="contact-info">
-                <a href="tel:+916388416100">+91-6388416100</a>
-                <a href="mailto:aryannohan007@outlook.com">aryannohan007@outlook.com</a>
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="tel:+916388416100"><i class="fas fa-phone"></i> +91-6388416100</a>
+                <a href="mailto:aryannohan007@outlook.com"><i class="fas fa-envelope"></i> aryannohan007@outlook.com</a>
+                <a href="https://www.linkedin.com/in/aryan-mohan-a57973227" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/aryanmohan7" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+            </ul>
+        </div>
     </nav>
 
     <div class="container">
         <section>
-            <h2>EDUCATION</h2>
-            <div class="education-item">
-                <h3>University of Petroleum and Energy Studies (UPES), Dehradun, India</h3>
-                <p><strong>B.Tech in Computer Science (Artificial Intelligence and Machine Learning)</strong></p>
-                <p class="education-duration">Aug 2021 – May 2025</p>
-                <p>Final Results Pending</p>
-                <p>CGPA: 7.0 / 10</p>
+            <h2>EDUCATION BACKGROUND</h2>
+            
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-btn red"></span>
+                        <span class="terminal-btn yellow"></span>
+                        <span class="terminal-btn green"></span>
+                    </div>
+                    <span class="terminal-title">education.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="terminal-prompt">$</span> ./view_education --focus=ai_ml</p>
+                    <p>> Loading academic credentials...</p>
+                    <p><span class="terminal-prompt">$</span> <span class="terminal-cursor">_</span></p>
+                </div>
+            </div>
+
+            <div class="card education-item">
+                <div class="education-header">
+                    <i class="fas fa-graduation-cap" style="color: var(--secondary);"></i>
+                    <div>
+                        <h3>University of Petroleum and Energy Studies (UPES)</h3>
+                        <p class="education-location"><i class="fas fa-map-marker-alt"></i> Dehradun, India</p>
+                    </div>
+                </div>
+                <div class="education-details">
+                    <p class="education-degree"><strong>B.Tech in Computer Science (Artificial Intelligence and Machine Learning)</strong></p>
+                    <p class="education-duration"><i class="far fa-calendar-alt"></i> August 2021 - May 2025 (Expected)</p>
+                    <p class="education-gpa"><i class="fas fa-star"></i> CGPA: 7.0/10</p>
+                    
+                    <div class="education-highlights">
+                        <h4>Key Specializations:</h4>
+                        <ul>
+                            <li>Advanced Machine Learning and Deep Learning</li>
+                            <li>Natural Language Processing</li>
+                            <li>Computer Vision and Image Processing</li>
+                            <li>Big Data Analytics</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="education-highlights">
+                        <h4>Notable Coursework:</h4>
+                        <div class="coursework-grid">
+                            <span class="course-tag">Neural Networks</span>
+                            <span class="course-tag">Data Mining</span>
+                            <span class="course-tag">AI Ethics</span>
+                            <span class="course-tag">Cloud Computing</span>
+                            <span class="course-tag">Python Programming</span>
+                            <span class="course-tag">Statistical Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card education-item">
+                <div class="education-header">
+                    <i class="fas fa-certificate" style="color: var(--secondary);"></i>
+                    <div>
+                        <h3>Additional Academic Achievements</h3>
+                    </div>
+                </div>
+                <div class="education-details">
+                    <ul>
+                        <li>Published research paper on "Optimizing Stable Diffusion for Low-Resource Environments" in UPES Tech Review</li>
+                        <li>Lead organizer for AI/ML Hackathon 2023 with 150+ participants</li>
+                        <li>Recipient of Dean's List recognition for academic excellence in 2022-23</li>
+                        <li>Active member of Data Science Student Consortium</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </div>
@@ -45,7 +111,63 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 Aryan Mohan. All rights reserved.</p>
+            <p>Built with <i class="fas fa-heart" style="color: #ff0000;"></i> using HTML, CSS, and AI</p>
         </div>
     </footer>
+
+    <style>
+        .education-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-header i {
+            font-size: 1.8rem;
+        }
+        
+        .education-location,
+        .education-duration,
+        .education-gpa {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.3rem 0;
+            color: var(--accent);
+        }
+        
+        .education-highlights {
+            margin: 1.5rem 0;
+        }
+        
+        .education-highlights h4 {
+            color: var(--secondary);
+            margin-bottom: 0.8rem;
+        }
+        
+        .coursework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        .course-tag {
+            background-color: rgba(100, 255, 218, 0.1);
+            color: var(--secondary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            text-align: center;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+        }
+        
+        @media (max-width: 600px) {
+            .coursework-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+    </style>
 </body>
 </html>

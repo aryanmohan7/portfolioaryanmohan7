@@ -1,16 +1,15 @@
-/* ===== Global Styles ===== */
+/* ===== AI/Data Science Themed Portfolio CSS ===== */
 :root {
-  --primary: #2c3e50;
-  --secondary: #3498db;
-  --light: #ecf0f1;
-  --dark: #2c3e50;
-  --accent: #e74c3c;
-  --text: #333;
-  --background: #f9f9f9;
-  --white: #ffffff;
-  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --primary: #0a192f;     /* Dark navy - professional base */
+  --secondary: #64ffda;   /* Teal - AI accent color */
+  --accent: #ccd6f6;      /* Light blue - data science */
+  --text: #e6f1ff;       /* Off-white for readability */
+  --background: #0a192f;  /* Dark theme */
+  --card-bg: #112240;    /* Slightly lighter cards */
+  --terminal: #1e2a3a;   /* Code block background */
 }
 
+/* ===== Base Styles ===== */
 * {
   margin: 0;
   padding: 0;
@@ -22,15 +21,32 @@ body {
   line-height: 1.6;
   color: var(--text);
   background-color: var(--background);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(100, 255, 218, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(100, 255, 218, 0.1) 0%, transparent 20%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 a {
+  color: var(--secondary);
   text-decoration: none;
-  color: inherit;
+  transition: color 0.3s ease;
 }
 
-ul {
-  list-style: none;
+a:hover {
+  color: var(--accent);
 }
 
 .container {
@@ -39,30 +55,57 @@ ul {
   padding: 0 20px;
 }
 
+section {
+  padding: 3rem 0;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--secondary);
+  margin: 0.8rem auto 0;
+}
+
 /* ===== Header Styles ===== */
 header {
   background-color: var(--primary);
-  color: var(--white);
-  padding: 2rem 0;
+  color: var(--text);
+  padding: 2.5rem 0;
   text-align: center;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.2);
 }
 
 header h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .contact-info {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 1rem;
 }
 
 .contact-info a {
-  color: var(--light);
-  transition: color 0.3s ease;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .contact-info a:hover {
@@ -71,175 +114,164 @@ header h1 {
 
 /* ===== Navigation Styles ===== */
 nav {
-  background-color: var(--secondary);
+  background-color: rgba(10, 25, 47, 0.95);
   padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
 }
 
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
+  list-style: none;
 }
 
 nav ul li a {
-  color: var(--white);
-  font-weight: 600;
+  color: var(--accent);
+  font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--secondary);
+  background-color: rgba(100, 255, 218, 0.1);
 }
 
-/* ===== Section Common Styles ===== */
-section {
-  padding: 3rem 0;
-}
-
-section h2 {
-  color: var(--primary);
-  margin-bottom: 2rem;
-  text-align: center;
-  font-size: 2rem;
-  position: relative;
-}
-
-section h2::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background-color: var(--secondary);
-  margin: 0.5rem auto 0;
-}
-
-/* ===== Card Styles (Used in multiple sections) ===== */
+/* ===== Card Styles ===== */
 .card {
-  background-color: var(--white);
+  background-color: var(--card-bg);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: var(--shadow);
   margin-bottom: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--secondary);
 }
 
-/* ===== Education Section ===== */
-.education-item h3 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
+/* ===== Terminal Component ===== */
+.terminal {
+  background: var(--terminal);
+  border-radius: 8px;
+  margin: 2rem 0;
+  overflow: hidden;
+  border: 1px solid rgba(100, 255, 218, 0.2);
 }
 
-.education-duration {
-  color: var(--secondary);
-  font-weight: 600;
-  margin-bottom: 1rem;
+.terminal-header {
+  background: #1a1a1a;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.terminal-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
   display: inline-block;
 }
 
-/* ===== Experience Section ===== */
-.experience-item h3 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
+.terminal-btn.red { background: #ff5f56; }
+.terminal-btn.yellow { background: #ffbd2e; }
+.terminal-btn.green { background: #27c93f; }
+
+.terminal-title {
+  color: #888;
+  text-align: center;
+  flex-grow: 1;
+  font-family: monospace;
+  font-size: 0.8rem;
 }
 
+.terminal-body {
+  padding: 1.5rem;
+  font-family: 'Courier New', monospace;
+  line-height: 1.8;
+}
+
+.terminal-prompt {
+  color: var(--secondary);
+  margin-right: 0.5rem;
+}
+
+.terminal-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ===== Project Specific Styles ===== */
+.project-tech {
+  display: inline-block;
+  background: var(--terminal);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin: 0.5rem 0;
+}
+
+/* ===== Experience Specific Styles ===== */
 .experience-company {
   color: var(--secondary);
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
   display: block;
 }
 
 .experience-duration {
-  color: var(--dark);
+  color: var(--accent);
   font-style: italic;
   margin-bottom: 1rem;
   display: block;
 }
 
-.experience-details ul {
-  margin-top: 1rem;
+/* ===== List Styles ===== */
+ul {
   padding-left: 1.5rem;
 }
 
-.experience-details li {
+li {
   margin-bottom: 0.5rem;
   position: relative;
 }
 
-.experience-details li::before {
+li::before {
   content: '▹';
   position: absolute;
   left: -1.5rem;
   color: var(--secondary);
-}
-
-/* ===== Projects Section ===== */
-.project-item h3 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.project-tech {
-  color: var(--secondary);
-  font-style: italic;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.project-details ul {
-  margin-top: 1rem;
-  padding-left: 1.5rem;
-}
-
-.project-details li {
-  margin-bottom: 0.5rem;
-  position: relative;
-}
-
-.project-details li::before {
-  content: '▹';
-  position: absolute;
-  left: -1.5rem;
-  color: var(--secondary);
-}
-
-/* ===== Certifications Section ===== */
-.certification-item h3 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.certification-issuer {
-  color: var(--secondary);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.certification-date {
-  color: var(--dark);
-  font-style: italic;
-  margin-bottom: 1rem;
-  display: block;
 }
 
 /* ===== Footer Styles ===== */
 footer {
-  background-color: var(--dark);
-  color: var(--white);
+  background-color: var(--primary);
+  color: var(--accent);
   text-align: center;
   padding: 2rem 0;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(100, 255, 218, 0.2);
 }
 
 /* ===== Responsive Design ===== */
@@ -250,22 +282,22 @@ footer {
 
   nav ul {
     flex-direction: column;
-    align-items: center;
     gap: 0.5rem;
+    align-items: center;
   }
 
   .contact-info {
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-  }
-
-  .container {
-    padding: 0 15px;
+    gap: 0.8rem;
   }
 
   section {
     padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 15px;
   }
 }
 
