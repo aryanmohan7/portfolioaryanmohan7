@@ -42,7 +42,7 @@ body::before {
 a {
   color: var(--secondary);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 a:hover {
@@ -220,7 +220,44 @@ nav ul li a:hover {
   50% { opacity: 0; }
 }
 
-/* ===== Project Specific Styles ===== */
+/* ===== Project Styles ===== */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-header > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-header i {
+  font-size: 1.8rem;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary);
+  background: rgba(100, 255, 218, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  background: rgba(100, 255, 218, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 .project-tech {
   display: inline-block;
   background: var(--terminal);
@@ -232,7 +269,52 @@ nav ul li a:hover {
   margin: 0.5rem 0;
 }
 
-/* ===== Experience Specific Styles ===== */
+.project-metrics {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+/* ===== Skills Section ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.skill-tags span {
+  background: rgba(100, 255, 218, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* ===== Highlight Box ===== */
+.highlight-box {
+  background: rgba(100, 255, 218, 0.05);
+  border-left: 3px solid var(--secondary);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* ===== Experience Styles ===== */
 .experience-company {
   color: var(--secondary);
   font-weight: 600;
@@ -299,6 +381,21 @@ footer {
   .container {
     padding: 0 15px;
   }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .github-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-metrics {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -308,5 +405,9 @@ footer {
 
   .card {
     padding: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }

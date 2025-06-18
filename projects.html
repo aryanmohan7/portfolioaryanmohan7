@@ -54,8 +54,13 @@
 
             <div class="card project-item">
                 <div class="project-header">
-                    <i class="fas fa-robot" style="color: var(--secondary);"></i>
-                    <h3>Text-to-Image Generator</h3>
+                    <div>
+                        <i class="fas fa-robot" style="color: var(--secondary);"></i>
+                        <h3>Text-to-Image Generator</h3>
+                    </div>
+                    <a href="https://github.com/aryanmohan7/Text-to-Image-Generation-using-GAN.git" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
                 <p class="project-tech">Python | Hugging Face | Stable Diffusion | PyTorch</p>
                 <div class="project-details">
@@ -74,8 +79,13 @@
 
             <div class="card project-item">
                 <div class="project-header">
-                    <i class="fas fa-shopping-cart" style="color: var(--secondary);"></i>
-                    <h3>Online Retail Recommendation System</h3>
+                    <div>
+                        <i class="fas fa-shopping-cart" style="color: var(--secondary);"></i>
+                        <h3>Online Retail Recommendation System</h3>
+                    </div>
+                    <a href="https://github.com/aryanmohan7/Online-Retail-Recommendation-System.git" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
                 <p class="project-tech">Python | Pandas | Scikit-learn | Collaborative Filtering</p>
                 <div class="project-details">
@@ -94,8 +104,13 @@
 
             <div class="card project-item">
                 <div class="project-header">
-                    <i class="fas fa-cloud" style="color: var(--secondary);"></i>
-                    <h3>Weather Image Classification</h3>
+                    <div>
+                        <i class="fas fa-cloud" style="color: var(--secondary);"></i>
+                        <h3>Weather Image Classification</h3>
+                    </div>
+                    <a href="https://github.com/aryanmohan7/Weather-Image-Classification.git" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
                 <p class="project-tech">PyTorch | ResNet-101 | XGBoost | Genetic Algorithm</p>
                 <div class="project-details">
@@ -106,8 +121,18 @@
                         <li>Combined XGBoost and SVM in an ensemble to boost performance by 7% over baseline</li>
                     </ul>
                     <div class="project-metrics">
-                        <span class="metric"><i class="fas fa-images"></i> Dataset: 15K labeled images</span>
-                        <span class="metric"><i class="fas fa-bolt"></i> Accuracy: 92%</span>
+                        <div class="metric">
+                            <i class="fas fa-bullseye"></i>
+                            <span>Accuracy: <strong>92%</strong></span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Model: <strong>ResNet-101</strong></span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-dna"></i>
+                            <span>Feature Selection: <strong>Genetic Algorithm</strong></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,13 +149,38 @@
     <style>
         .project-header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             gap: 1rem;
             margin-bottom: 1rem;
         }
         
+        .project-header > div {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
         .project-header i {
             font-size: 1.8rem;
+        }
+        
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary);
+            background: rgba(100, 255, 218, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .github-link:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateY(-2px);
         }
         
         .project-metrics {
@@ -149,6 +199,16 @@
         }
         
         @media (max-width: 600px) {
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .github-link {
+                width: 100%;
+                justify-content: center;
+            }
+            
             .project-metrics {
                 flex-direction: column;
                 gap: 0.5rem;
