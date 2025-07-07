@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Aryan Mohan</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header class="navbar">
         <div class="container">
-            <h1>ARYAN MOHAN</h1>
+            <h1 class="navbar-brand">ARYAN MOHAN</h1>
             <div class="contact-info">
                 <a href="tel:+916388416100"><i class="fas fa-phone"></i> +91-6388416100</a>
                 <a href="mailto:aryannohan007@outlook.com"><i class="fas fa-envelope"></i> aryannohan007@outlook.com</a>
@@ -20,42 +24,26 @@
         </div>
     </header>
 
-    <nav>
+    <nav class="nav">
         <div class="container">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="container">
-        <section>
-            <h2>AI & DATA SCIENCE PROJECTS</h2>
+    <main class="container">
+        <section class="projects-section">
+            <h2><span class="highlight">AI & DATA SCIENCE</span> PROJECTS</h2>
             
-            <div class="terminal">
-                <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="terminal-btn red"></span>
-                        <span class="terminal-btn yellow"></span>
-                        <span class="terminal-btn green"></span>
-                    </div>
-                    <span class="terminal-title">projects.sh</span>
-                </div>
-                <div class="terminal-body">
-                    <p><span class="terminal-prompt">$</span> ./run_projects --category=ai_ml</p>
-                    <p>> Loading 3 featured projects...</p>
-                    <p><span class="terminal-prompt">$</span> <span class="terminal-cursor">_</span></p>
-                </div>
-            </div>
-
             <div class="card project-item">
                 <div class="project-header">
                     <div>
-                        <i class="fas fa-robot" style="color: var(--secondary);"></i>
+                        <i class="fas fa-robot highlight"></i>
                         <h3>Text-to-Image Generator</h3>
                     </div>
                     <a href="https://github.com/aryanmohan7/Text-to-Image-Generation-using-GAN.git" target="_blank" class="github-link">
@@ -80,7 +68,7 @@
             <div class="card project-item">
                 <div class="project-header">
                     <div>
-                        <i class="fas fa-shopping-cart" style="color: var(--secondary);"></i>
+                        <i class="fas fa-shopping-cart highlight"></i>
                         <h3>Online Retail Recommendation System</h3>
                     </div>
                     <a href="https://github.com/aryanmohan7/Online-Retail-Recommendation-System.git" target="_blank" class="github-link">
@@ -96,7 +84,7 @@
                         <li>Achieved 85% recommendation accuracy on test data</li>
                     </ul>
                     <div class="project-metrics">
-                        <span class="metric"><i class="fas fa-database"></i> Dataset: 50K transactions</span>
+                        <span class="metric"><i class="fas fa-database"></i> Dataset: 500K transactions</span>
                         <span class="metric"><i class="fas fa-percentage"></i> Accuracy: 85%</span>
                     </div>
                 </div>
@@ -105,7 +93,7 @@
             <div class="card project-item">
                 <div class="project-header">
                     <div>
-                        <i class="fas fa-cloud" style="color: var(--secondary);"></i>
+                        <i class="fas fa-cloud highlight"></i>
                         <h3>Weather Image Classification</h3>
                     </div>
                     <a href="https://github.com/aryanmohan7/Weather-Image-Classification.git" target="_blank" class="github-link">
@@ -137,83 +125,13 @@
                 </div>
             </div>
         </section>
-    </div>
+    </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Aryan Mohan. All rights reserved.</p>
-            <p>Built with <i class="fas fa-heart" style="color: #ff0000;"></i> using HTML, CSS, and AI</p>
+            <p>Built using HTML, and CSS</p>
         </div>
     </footer>
-
-    <style>
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .project-header > div {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .project-header i {
-            font-size: 1.8rem;
-        }
-        
-        .github-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--secondary);
-            background: rgba(100, 255, 218, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .github-link:hover {
-            background: rgba(100, 255, 218, 0.2);
-            transform: translateY(-2px);
-        }
-        
-        .project-metrics {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .metric {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            color: var(--accent);
-        }
-        
-        @media (max-width: 600px) {
-            .project-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .github-link {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .project-metrics {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-    </style>
 </body>
 </html>

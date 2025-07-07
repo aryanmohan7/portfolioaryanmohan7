@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education - Aryan Mohan</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header class="navbar">
         <div class="container">
-            <h1>ARYAN MOHAN</h1>
+            <h1 class="navbar-brand">ARYAN MOHAN</h1>
             <div class="contact-info">
                 <a href="tel:+916388416100"><i class="fas fa-phone"></i> +91-6388416100</a>
                 <a href="mailto:aryannohan007@outlook.com"><i class="fas fa-envelope"></i> aryannohan007@outlook.com</a>
@@ -20,41 +24,25 @@
         </div>
     </header>
 
-    <nav>
+    <nav class="nav">
         <div class="container">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="education.html" class="nav-link active">Education</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="container">
-        <section>
-            <h2>EDUCATION BACKGROUND</h2>
+    <main class="container">
+        <section class="education-section">
+            <h2><span class="highlight">EDUCATION</span> BACKGROUND</h2>
             
-            <div class="terminal">
-                <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="terminal-btn red"></span>
-                        <span class="terminal-btn yellow"></span>
-                        <span class="terminal-btn green"></span>
-                    </div>
-                    <span class="terminal-title">education.sh</span>
-                </div>
-                <div class="terminal-body">
-                    <p><span class="terminal-prompt">$</span> ./view_education --focus=ai_ml</p>
-                    <p>> Loading academic credentials...</p>
-                    <p><span class="terminal-prompt">$</span> <span class="terminal-cursor">_</span></p>
-                </div>
-            </div>
-
             <div class="card education-item">
                 <div class="education-header">
-                    <i class="fas fa-graduation-cap" style="color: var(--secondary);"></i>
+                    <i class="fas fa-graduation-cap highlight"></i>
                     <div>
                         <h3>University of Petroleum and Energy Studies (UPES)</h3>
                         <p class="education-location"><i class="fas fa-map-marker-alt"></i> Dehradun, India</p>
@@ -88,86 +76,14 @@
                     </div>
                 </div>
             </div>
-
-            <div class="card education-item">
-                <div class="education-header">
-                    <i class="fas fa-certificate" style="color: var(--secondary);"></i>
-                    <div>
-                        <h3>Additional Academic Achievements</h3>
-                    </div>
-                </div>
-                <div class="education-details">
-                    <ul>
-                        <li>Published research paper on "Optimizing Stable Diffusion for Low-Resource Environments" in UPES Tech Review</li>
-                        <li>Lead organizer for AI/ML Hackathon 2023 with 150+ participants</li>
-                        <li>Recipient of Dean's List recognition for academic excellence in 2022-23</li>
-                        <li>Active member of Data Science Student Consortium</li>
-                    </ul>
-                </div>
-            </div>
         </section>
-    </div>
+    </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Aryan Mohan. All rights reserved.</p>
-            <p>Built with <i class="fas fa-heart" style="color: #ff0000;"></i> using HTML, CSS, and AI</p>
+            <p>Built using HTML, and CSS</p>
         </div>
     </footer>
-
-    <style>
-        .education-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .education-header i {
-            font-size: 1.8rem;
-        }
-        
-        .education-location,
-        .education-duration,
-        .education-gpa {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin: 0.3rem 0;
-            color: var(--accent);
-        }
-        
-        .education-highlights {
-            margin: 1.5rem 0;
-        }
-        
-        .education-highlights h4 {
-            color: var(--secondary);
-            margin-bottom: 0.8rem;
-        }
-        
-        .coursework-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 0.8rem;
-            margin-top: 0.5rem;
-        }
-        
-        .course-tag {
-            background-color: rgba(100, 255, 218, 0.1);
-            color: var(--secondary);
-            padding: 0.4rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            text-align: center;
-            border: 1px solid rgba(100, 255, 218, 0.3);
-        }
-        
-        @media (max-width: 600px) {
-            .coursework-grid {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            }
-        }
-    </style>
 </body>
 </html>
