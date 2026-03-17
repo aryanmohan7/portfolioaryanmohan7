@@ -40,6 +40,21 @@
         <section class="projects-section">
             <h2><span class="highlight">AI & DATA SCIENCE</span> PROJECTS</h2>
             
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-btn red"></span>
+                        <span class="terminal-btn yellow"></span>
+                        <span class="terminal-btn green"></span>
+                    </div>
+                    <span class="terminal-title">education.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="terminal-prompt">$</span> ./view_projects --focus=ai_ml</p>
+                    <p>> Loading projects...</p>
+                    <p><span class="terminal-prompt">$</span> <span class="terminal-cursor">_</span></p>
+                </div>
+            </div>
             <div class="card project-item">
                 <div class="project-header">
                     <div>
@@ -61,6 +76,29 @@
                     <div class="project-metrics">
                         <span class="metric"><i class="fas fa-tachometer-alt"></i> Performance: 2.5s/image (RTX 3060)</span>
                         <span class="metric"><i class="fas fa-chart-line"></i> Output Quality: 92% user satisfaction</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card project-item">
+                <div class="project-header">
+                    <div>
+                        <i class="fas fa-robot highlight"></i>
+                        <h3>Intelligent Incident Parser (LLM/Groq + Streamlit)</h3>
+                    </div>
+                    <a href="https://github.com/aryanmohan7/incident-parser.git" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+                <p class="project-tech">Python | Streamlit | Groq</p>
+                <div class="project-details">
+                    <ul>
+                        <li>Architected an AI-powered parsing engine utilizing the Groq API and Streamlit to transform unstructured system alerts into a strict, queried JSON schema</li>
+                        <li>Engineered advanced prompts and implemented hallucination control mechanisms, ensuring high-fidelity extraction of critical data fields with reliable fallback parsing</li>
+                    </ul>
+                    <div class="project-metrics">
+                        <span class="metric"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="metric"><i class="fas fa-chart-line"></i></span>
                     </div>
                 </div>
             </div>
